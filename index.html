@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onde Está Flávio Bolsonaro? - Jogo Retrô 16-bits</title>
+  <meta name="description" content="Jogo de investigação retrô no estilo Where in the World is Carmen Sandiego? dos anos 90. Rastreie pistas, cheques, transações em dinheiro vivo e depósitos de chocolate!">
+  <link rel="stylesheet" href="css/retro.css">
+</head>
+<body>
+
+  <!-- Efeito Scanlines CRT Retrô -->
+  <div id="scanlines-overlay" class="scanlines-overlay"></div>
+
+  <!-- Container Principal do Jogo (VGA 800x600) -->
+  <main class="game-container" id="game-app">
+
+    <!-- Barra de Título Superior -->
+    <header class="header-bar">
+      <div style="width: 100px;">
+        <button id="btn-toggle-scanlines" class="btn-icon-tiny" title="Alternar Scanlines CRT">📺 CRT</button>
+      </div>
+      <h1 class="game-title">ONDE ESTÁ FLÁVIO BOLSONARO?</h1>
+      <div class="top-controls" style="width: 100px; justify-content: flex-end;">
+        <button id="btn-toggle-audio" class="btn-icon-tiny" title="Alternar Efeitos Sonoros">🔊 SOM: ON</button>
+      </div>
+    </header>
+
+    <!-- Seção Principal: Retrato + Dossiê de Texto -->
+    <section class="main-section">
+
+      <!-- Painel Esquerdo: Retrato do Suspeito / Personagem -->
+      <aside class="portrait-panel">
+        <div class="portrait-frame">
+          <img id="portrait-img" class="portrait-img" src="assets/images/flavio_suspeito.png" alt="Retrato do Suspeito">
+        </div>
+        <div class="portrait-label-box">
+          <div id="portrait-label" class="portrait-label-text">SUSPEITO: FLÁVIO B.</div>
+        </div>
+      </aside>
+
+      <!-- Painel Direito: Janela de Dossiê e Diálogos -->
+      <section class="dossier-window">
+        <div class="window-titlebar">
+          <div class="titlebar-title">
+            <span>[=]</span>
+            <span id="window-subtitle">DOSSIÊ - POLÍCIA FEDERAL</span>
+          </div>
+          <button id="window-close-btn" class="window-close-btn" title="Limpar/Atualizar Dossiê">✕</button>
+        </div>
+
+        <div class="dossier-body">
+          <div id="dossier-text" class="dossier-text-content">
+            Carregando sistema de inteligência da Polícia Federal...
+          </div>
+
+          <!-- Barra de Rolagem Retrô Estilo Windows 3.1 / DOS -->
+          <div class="retro-scrollbar">
+            <button id="scroll-up" class="scroll-btn">▲</button>
+            <div class="scroll-thumb"></div>
+            <button id="scroll-down" class="scroll-btn">▼</button>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- Painel Inferior: Mini-Mapa e Botoeira de Controle -->
+    <footer class="bottom-panel">
+
+      <!-- Mini-Mapa com Radar e Linhas de Voo -->
+      <div class="mini-map-box">
+        <canvas id="mini-map-canvas" class="mini-map-canvas" width="252" height="127"></canvas>
+      </div>
+
+      <!-- Botoeira Chanfrada 3D -->
+      <div class="control-grid">
+        <div class="buttons-grid-layout">
+          <button id="btn-investigar" class="retro-btn">INVESTIGAR</button>
+          <button id="btn-ver-mapa" class="retro-btn">VER MAPA</button>
+          <button id="btn-viajar" class="retro-btn btn-travel">VIAJAR</button>
+          <button id="btn-interpol" class="retro-btn">INTERPOL / PF</button>
+          <button id="btn-cias" class="retro-btn">COMPANHIAS<br>AÉREAS</button>
+        </div>
+
+        <!-- Barra de Status com Dias Restantes -->
+        <div class="status-bar">
+          <span id="location-indicator" class="location-indicator">LOCAL: RIO DE JANEIRO</span>
+          <span id="days-counter" class="days-counter">DIAS ANTES DA PRESCRIÇÃO: 8</span>
+        </div>
+      </div>
+
+    </footer>
+
+    <!-- Janela Modal Genérica para Ações, Subtelas e Finais -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+      <div class="modal-window">
+        <div class="modal-titlebar">
+          <span id="modal-title">TÍTULO DO SISTEMA</span>
+          <button id="modal-close-btn" class="window-close-btn">✕</button>
+        </div>
+        <div id="modal-body" class="modal-content">
+          <!-- Conteúdo dinâmico via uiManager.js -->
+        </div>
+        <div id="modal-actions" class="modal-actions">
+          <!-- Botões dinâmicos -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Scripts do Jogo -->
+  <script src="js/audioSynth.js"></script>
+  <script src="js/gameData.js"></script>
+  <script src="js/mapCanvas.js"></script>
+  <script src="js/uiManager.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
