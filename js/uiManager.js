@@ -238,7 +238,7 @@ class UIManager {
         <p style="font-size: 16px; color: #aaa;">Status Judicial: <b>MANDADO DE PRISÃO PREVENTIVA EXPEDIDO</b> (Necessita de 3+ provas para homologação em Miami)</p>
       </div>
 
-      <p style="font-family: var(--font-retro); font-size: 11px; color: #fff; margin-bottom: 10px;">EVIDÊNCIAS COLETADAS (${state.evidenciasColetadas.length}/4):</p>
+      <p style="font-family: var(--font-retro); font-size: 11px; line-height: 1.4; color: #fff; margin-bottom: 10px;">EVIDÊNCIAS COLETADAS (${state.evidenciasColetadas.length}/4):</p>
       <div class="evidence-grid">
     `;
 
@@ -363,7 +363,7 @@ class UIManager {
     const html = `
       <div class="flight-anim-container">
         <div class="flight-plane-icon">✈️</div>
-        <p style="font-family: var(--font-retro); font-size: 13px; color: var(--text-yellow); text-align: center;">
+        <p style="font-family: var(--font-retro); font-size: 13px; line-height: 1.5; color: var(--text-yellow); text-align: center;">
           EM VOO RUMO A: ${destCity.nome.toUpperCase()}...
         </p>
         <p style="font-size: 18px; color: #aaa;">Cruzando espaço aéreo. Investigadores consultando registros.</p>
@@ -384,7 +384,7 @@ class UIManager {
 
     const html = `
       <div style="text-align: center; padding: 10px;">
-        <h2 style="font-family: var(--font-retro); color: var(--text-red); font-size: 16px; margin-bottom: 16px;">
+        <h2 style="font-family: var(--font-retro); color: var(--text-red); font-size: 16px; line-height: 1.5; margin-bottom: 16px;">
           ⚖️ GAME OVER: PRESCRIÇÃO PENAL CONSUMADA!
         </h2>
         <div style="background: #111; border: 2px solid #555; padding: 14px; margin-bottom: 16px; text-align: justify; font-size: 19px;">
@@ -411,7 +411,7 @@ class UIManager {
 
     const html = `
       <div style="text-align: center; padding: 10px;">
-        <h2 style="font-family: var(--font-retro); color: #00ffaa; font-size: 16px; margin-bottom: 16px;">
+        <h2 style="font-family: var(--font-retro); color: #00ffaa; font-size: 16px; line-height: 1.5; margin-bottom: 16px;">
           🚨 OPERAÇÃO CONCLUÍDA: PRISÃO EM MIAMI!
         </h2>
         <div style="background: #10241b; border: 2px solid #00ffaa; padding: 14px; margin-bottom: 16px; text-align: justify; font-size: 19px; color: #e0f2fe;">
@@ -419,7 +419,7 @@ class UIManager {
           Com as <b>${state.evidenciasColetadas.length} provas cruciais</b> reunidas (Rachadinhas na ALERJ, depósitos de chocolate em dinheiro vivo, cheques de Queiroz e a mansão no Lago Sul), a PF e a Interpol enquadraram Flávio Bolsonaro no resort em Miami Beach!<br><br>
           O mandado de extradição foi homologado e as algemas foram colocadas sob aplausos dos banhistas!
         </div>
-        <p style="font-family: var(--font-retro); font-size: 10px; color: var(--text-yellow); animation: pulse-alert 1s infinite;">
+        <p style="font-family: var(--font-retro); font-size: 10px; line-height: 1.4; color: var(--text-yellow); animation: pulse-alert 1s infinite;">
           AGUARDANDO CONFIRMAÇÃO DO TRIBUNAL...
         </p>
       </div>
@@ -457,7 +457,7 @@ class UIManager {
       </div>
 
       <div style="margin-top: 16px; text-align: center;">
-        <p style="font-family: var(--font-retro); font-size: 11px; color: var(--text-yellow);">
+        <p style="font-family: var(--font-retro); font-size: 11px; line-height: 1.4; color: var(--text-yellow);">
           FIM DE JOGO(?) • BEM-VINDO AO BRASIL!
         </p>
       </div>

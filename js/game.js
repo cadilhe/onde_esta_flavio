@@ -64,6 +64,24 @@ class GameController {
         window.uiManager.openTravelMenu();
       });
     }
+
+    const btnReiniciar = document.getElementById('btn-reiniciar');
+    if (btnReiniciar) {
+      btnReiniciar.addEventListener('click', () => {
+        window.audioSynth.init();
+        if (confirm("Deseja reiniciar a investigação desde o início? Todo o progresso da partida atual será zerado.")) {
+          this.restart();
+        }
+      });
+    }
+
+    const windowCloseBtn = document.getElementById('window-close-btn');
+    if (windowCloseBtn) {
+      windowCloseBtn.addEventListener('click', () => {
+        window.audioSynth.init();
+        window.uiManager.renderCurrentLocation();
+      });
+    }
   }
 
   restart() {
